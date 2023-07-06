@@ -7,6 +7,11 @@
 
 import UIKit
 
+// Add the Performance Monitoring module to your header
+import FirebasePerformance
+import FirebaseAnalytics
+
+
 class MainViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -22,6 +27,84 @@ class MainViewController: UIViewController {
         let str = arr[3]
     }
     
+    @IBAction func customTrace1(_ sender: Any) {
+        
+//        let trace = Performance.startTrace(name: "CUSTOM_TRACE_loop1")
+//        // code that you want to trace
+//        for index in 1...100005 {
+//            print("\(index) times 5 is \(index * 5)")
+//        }
+//        trace?.stop()
+        
+        
+        let trace = Performance.startTrace(name: "CUSTOM_TRACE_loop2")
+        trace?.incrementMetric("EVENT_NAME_loop2", by: 113)
+        // code that you want to trace (and log custom metrics)
+        for index in 1...1005 {
+            print("\(index) times 5 is \(index * 5)")
+        }
+
+        trace?.stop()
+        
+        /*
+        var preTrace : Trace?;
+        
+        if let trace = Performance.startTrace(name: "CUSTOM_TRACE_attr")
+        {
+            preTrace = trace
+             
+            trace.setValue("Adddd", forAttribute: "experiment")
+
+            // Update scenario.
+//            trace.setValue("B", forAttribute: "experiment")
+            
+            for index in 1...1005 {
+                print("\(index) times 5 is \(index * 5)")
+            }
+
+            // Reading scenario.
+            let experimentValue:String? = trace.value(forAttribute: "experiment")
+            
+            print(experimentValue ?? "")
+
+            // Delete scenario.
+          //  trace.removeAttribute("experiment")
+
+            // Read attributes.
+            let attributes:[String:String] = trace.attributes;
+            
+            print(attributes)
+            
+            trace.stop()
+        }
+        */
+        
+        
+
+//        if let trace = preTrace {
+//            
+//            print("log experiment")
+//
+//            // Reading scenario.
+//            let experimentValue:String? = trace.value(forAttribute: "experiment")
+//            
+//            print(experimentValue ?? "")
+//
+//            // Delete scenario.
+//            trace.removeAttribute("experiment")
+//
+//            // Read attributes.
+//            let attributes:[String:String] = trace.attributes;
+//            
+//            print(attributes)
+//            
+//            trace.stop()
+//        }
+          
+           
+        
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -31,5 +114,18 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func custom_event_test1(_ sender: Any) {
 
+        Analytics.logEvent("event_test1", parameters: ["para1" : "val1"])
+//        Analytics.logEvent("event_test1", parameters: nil)
+
+        let title: String? = "记录id"
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+          AnalyticsParameterItemID: "id-\(title!)",
+          AnalyticsParameterItemName: title!,
+          AnalyticsParameterContentType: "cont",
+        ])
+        
+    }
+    
 }

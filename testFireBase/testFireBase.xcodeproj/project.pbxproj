@@ -15,12 +15,12 @@
 		73ED8BB02A3C2F740069909F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73ED8BAF2A3C2F740069909F /* GoogleService-Info.plist */; };
 		73ED8BB32A3FEB460069909F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED8BB12A3FEB460069909F /* MainViewController.swift */; };
 		73ED8BB42A3FEB460069909F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ED8BB22A3FEB460069909F /* MainViewController.xib */; };
-		F290BD0F1D4F8E4EB7505AAA /* Pods_testFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A79F2333D5DAACB1B991105 /* Pods_testFireBase.framework */; };
+		F0D07D738B72F7D497E36CF7 /* libPods-testFireBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B4B44B8DD3BADC6503DC0B /* libPods-testFireBase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A79F2333D5DAACB1B991105 /* Pods_testFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F67E4A0BA3391C90A775EC /* Pods-testFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testFireBase.release.xcconfig"; path = "Target Support Files/Pods-testFireBase/Pods-testFireBase.release.xcconfig"; sourceTree = "<group>"; };
+		39B4B44B8DD3BADC6503DC0B /* libPods-testFireBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testFireBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ED8B982A3C2F370069909F /* testFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ED8B9B2A3C2F370069909F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73ED8B9F2A3C2F370069909F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F290BD0F1D4F8E4EB7505AAA /* Pods_testFireBase.framework in Frameworks */,
+				F0D07D738B72F7D497E36CF7 /* libPods-testFireBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 		A899E42F68C9470C27A6EE3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A79F2333D5DAACB1B991105 /* Pods_testFireBase.framework */,
+				39B4B44B8DD3BADC6503DC0B /* libPods-testFireBase.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +108,6 @@
 				73ED8B942A3C2F370069909F /* Sources */,
 				73ED8B952A3C2F370069909F /* Frameworks */,
 				73ED8B962A3C2F370069909F /* Resources */,
-				1778D872DA79A398395764F1 /* [CP] Embed Pods Frameworks */,
 				73ED8BD52A4025BA0069909F /* FireBase */,
 			);
 			buildRules = (
@@ -169,23 +168,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1778D872DA79A398395764F1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testFireBase/Pods-testFireBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-testFireBase/Pods-testFireBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testFireBase/Pods-testFireBase-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		73ED8BD52A4025BA0069909F /* FireBase */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -383,7 +365,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 413;
+				CURRENT_PROJECT_VERSION = 415;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8LQ7CL73D8;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -397,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbx.test2024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -415,7 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 413;
+				CURRENT_PROJECT_VERSION = 415;
 				DEVELOPMENT_TEAM = 8LQ7CL73D8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testFireBase/Info.plist;
@@ -428,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbx.test2024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
